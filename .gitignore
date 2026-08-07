@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.DS_Store
+*.local
+
+# credentials — nothing of the sort belongs in this repo, this is a backstop
+.env
+.env.*
+*service-account*.json
+*credentials*.json
+*.pem
+*.key

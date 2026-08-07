@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="only light" />
+
+    <title>SPIRALES — Software Solutions &amp; Services</title>
+    <meta
+      name="description"
+      content="SPIRALES designs and engineers software for companies navigating complexity. Architecture, engineering and operations."
+    />
+    <link rel="canonical" href="https://spirales.tech/" />
+    <meta name="theme-color" content="#E5E4DF" />
+
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="SPIRALES" />
+    <meta property="og:title" content="SPIRALES — Software Solutions &amp; Services" />
+    <meta
+      property="og:description"
+      content="We design and engineer software for companies navigating complexity."
+    />
+    <meta property="og:url" content="https://spirales.tech/" />
+    <meta property="og:image" content="https://spirales.tech/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link
+      rel="preload"
+      href="/fonts/dm-sans-300-500-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/unbounded-400-700-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
+      });
+      gtag("js", new Date());
+      gtag("config", "G-J8HM5260T0");
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8HM5260T0"></script>
+
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        background: #e5e4df;
+      }
+      #root {
+        height: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      document.querySelectorAll("[data-year]").forEach(function (e) {
+        e.textContent = new Date().getFullYear();
+      });
+      document.addEventListener("click", function (event) {
+        var button = event.target.closest("[data-copy]");
+        if (!button) return;
+        var text = button.getAttribute("data-copy");
+
+        function confirm() {
+          button.classList.add("is-copied");
+          button.setAttribute("aria-label", "Email address copied");
+          setTimeout(function () {
+            button.classList.remove("is-copied");
+            button.setAttribute("aria-label", "Copy email address");
+          }, 1800);
+        }
+
+        function fallback() {
+          var field = document.createElement("textarea");
+          field.value = text;
+          field.setAttribute("readonly", "");
+          field.style.cssText = "position:fixed;top:0;left:-9999px";
+          document.body.appendChild(field);
+          field.select();
+          var copied = false;
+          try {
+            copied = document.execCommand("copy");
+          } catch (e) {
+            copied = false;
+          }
+          document.body.removeChild(field);
+          if (copied) confirm();
+        }
+
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(text).then(confirm, fallback);
+        } else {
+          fallback();
+        }
+      });
+    </script>
+  </body>
+</html>
