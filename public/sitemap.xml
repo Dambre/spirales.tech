@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://spirales.tech/</loc>
+    <lastmod>__LASTMOD__</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://spirales.tech/" />
+    <xhtml:link rel="alternate" hreflang="lt" href="https://spirales.tech/lt/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://spirales.tech/" />
+  </url>
+  <url>
+    <loc>https://spirales.tech/lt/</loc>
+    <lastmod>__LASTMOD__</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://spirales.tech/" />
+    <xhtml:link rel="alternate" hreflang="lt" href="https://spirales.tech/lt/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://spirales.tech/" />
+  </url>
+</urlset>

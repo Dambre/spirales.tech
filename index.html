@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="only light" />
+
+    <title>SPIRALES — Software Solutions &amp; Services</title>
+    <meta
+      name="description"
+      content="SPIRALES designs, builds and runs software for companies with complex processes: architecture, UX, engineering, operations and AI automation."
+    />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <link rel="canonical" href="https://spirales.tech/" />
+    <link rel="alternate" hreflang="en" href="https://spirales.tech/" />
+    <link rel="alternate" hreflang="lt" href="https://spirales.tech/lt/" />
+    <link rel="alternate" hreflang="x-default" href="https://spirales.tech/" />
+    <script data-locale-redirect>
+      (function () {
+        try {
+          if (localStorage.getItem("lang") === "en") return;
+          var l = (navigator.languages && navigator.languages[0]) || navigator.language || "";
+          if (/^lt(-|$)/i.test(l)) location.replace("/lt/" + location.hash);
+        } catch (e) {}
+      })();
+    </script>
+    <meta name="theme-color" content="#E5E4DF" />
+
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="SPIRALES" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="SPIRALES — Software Solutions &amp; Services" />
+    <meta
+      property="og:description"
+      content="We design, build and run software for companies with complex processes. Architecture, design and UX, engineering, operations and AI automation."
+    />
+    <meta property="og:url" content="https://spirales.tech/" />
+    <meta property="og:image" content="https://spirales.tech/og-image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="SPIRALES spiral mark on a dark tile" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="SPIRALES — Software Solutions &amp; Services" />
+    <meta
+      name="twitter:description"
+      content="We design, build and run software for companies with complex processes. Architecture, design and UX, engineering, operations and AI automation."
+    />
+    <meta name="twitter:image" content="https://spirales.tech/og-image.png" />
+    <meta name="twitter:image:alt" content="SPIRALES spiral mark on a dark tile" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://spirales.tech/#organization",
+        "name": "SPIRALES",
+        "legalName": "MB \"Socialinės savidestrukcijos spiralės multiplikavimo biuras\"",
+        "url": "https://spirales.tech/",
+        "logo": "https://spirales.tech/icon-512.png",
+        "image": "https://spirales.tech/og-image.png",
+        "email": "hello@spirales.tech",
+        "description": "SPIRALES designs, builds and runs software for companies with complex processes: architecture, UX, engineering, operations and AI automation.",
+        "address": { "@type": "PostalAddress", "addressCountry": "LT" },
+        "knowsAbout": [
+          "Software architecture",
+          "Cloud architecture",
+          "Technical strategy",
+          "UX and product design",
+          "Design systems",
+          "Accessibility and localisation",
+          "Web and mobile apps, end to end",
+          "System integrations",
+          "Data platforms",
+          "Infrastructure as code",
+          "CI/CD",
+          "Security and compliance",
+          "Reliability",
+          "AI automation"
+        ]
+      }
+    </script>
+
+    <link rel="preload" href="/fonts/dm-sans-300-500-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/unbounded-400-700-latin.woff2" as="font" type="font/woff2" crossorigin />
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
+      });
+      gtag("js", new Date());
+      gtag("config", "G-J8HM5260T0");
+      (function () {
+        var loaded = false;
+        function loadTag() {
+          if (loaded) return;
+          loaded = true;
+          var s = document.createElement("script");
+          s.async = true;
+          s.src = "https://www.googletagmanager.com/gtag/js?id=G-J8HM5260T0";
+          document.head.appendChild(s);
+        }
+        ["scroll", "pointerdown", "touchstart", "keydown"].forEach(function (type) {
+          window.addEventListener(type, loadTag, { once: true, passive: true });
+        });
+        window.addEventListener("load", function () { setTimeout(loadTag, 6000); });
+      })();
+    </script>
+
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        background: #e5e4df;
+      }
+      #root {
+        height: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      document.querySelectorAll("[data-year]").forEach(function (e) {
+        e.textContent = new Date().getFullYear();
+      });
+      document.addEventListener("click", function (event) {
+        var pick = event.target.closest("[data-lang]");
+        if (pick) {
+          try { localStorage.setItem("lang", pick.getAttribute("data-lang")); } catch (e) {}
+        }
+        var link = event.target.closest(".svc-menu a");
+        if (link) link.closest("details").removeAttribute("open");
+      });
+      document.addEventListener("click", function (event) {
+        var button = event.target.closest("[data-copy]");
+        if (!button) return;
+        var text = button.getAttribute("data-copy");
+
+        var idle = button.getAttribute("aria-label");
+        function confirm() {
+          button.classList.add("is-copied");
+          button.setAttribute("aria-label", button.getAttribute("data-copied"));
+          setTimeout(function () {
+            button.classList.remove("is-copied");
+            button.setAttribute("aria-label", idle);
+          }, 1800);
+        }
+
+        function fallback() {
+          var field = document.createElement("textarea");
+          field.value = text;
+          field.setAttribute("readonly", "");
+          field.style.cssText = "position:fixed;top:0;left:-9999px";
+          document.body.appendChild(field);
+          field.select();
+          var copied = false;
+          try {
+            copied = document.execCommand("copy");
+          } catch (e) {
+            copied = false;
+          }
+          document.body.removeChild(field);
+          if (copied) confirm();
+        }
+
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(text).then(confirm, fallback);
+        } else {
+          fallback();
+        }
+      });
+    </script>
+  </body>
+</html>
